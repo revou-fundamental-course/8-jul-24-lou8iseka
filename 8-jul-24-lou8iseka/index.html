@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale-1.0" />
+        <title>BMI Calculator - Louise Tamariska Utami</title>
+        <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+        <h1>BMI Calculator</h1>
+        <div class="content">
+
+            <div class="input">
+                <label for="height">Age</label>
+                <input type="text" class="text-input" id="age" autocomplete="off" required/>
+            </div>
+
+            <div class="container">
+                <div class="gender">
+    
+                    <!-- Radio button untuk laki-laki -->
+                    <input type="radio" id="selection-man" name="gender" value="male" checked>
+                    <label for="selection-man">Male</label>
+                    
+            
+                    <!-- Radio button untuk perempuan -->
+                    <input type="radio" id="selection-woman" name="gender" value="female">
+                    <label for="selection-woman">Female</label>
+            </div>
+        
+        </div>
+
+        <div class="containerHW">
+                <!-- height button -->
+            <div class="inputH">
+                    <label for="height">Height (cm)</label>
+                    <input type="number" id="height" required>
+            </div>  
+
+                <!-- weight button -->
+            <div class="inputW">
+                <label for="weight">Weight (kg)</label>
+                <input type="number" id="weight" required>
+            </div>
+        </div>
+
+                <!-- calculate bmi button -->
+            <button class="calculate" id="submit" onclick="calculate()">Calculate BMI</button>
+            <button class="reset" id="reset" onclick="reset()">Reset</button>
+        </div>
+        <div class="result">
+            <p>Your BMI is</p>
+            <div id="result">0</div>
+            <p class="comment"></p>
+        </div>
+
+                <!-- bmi scale -->
+        <section class="bmi-scale">
+            <div style="--color: var(--underweight)">
+                <h4>Underweight</h4>
+                <p>&lt; 18.5</p>
+            </div>
+
+            <div style="--color: var(--normal)">
+                <h4>Normal</h4>
+                <p>18.5 - 24.9</p>
+            </div>
+
+            <div style="--color: var(--overweight)">
+                <h4>Overweight</h4>
+                <p>25 - 29.9</p>
+            </div>
+
+            <div style="--color: var(--obese)">
+                <h4>Obese</h4>
+                <p>30 - 34.9</p>
+            </div>
+
+            <div style="--color: var(--extremely-obese)">
+                <h4>Extremely Obese</h4>
+                <p>> 35</p>
+            </div>
+        </section>
+    </div>
+</div>
+
+<!-- Side information -->
+<div class="side-info">
+    <h2>BMI Description</h2>
+    <p>BMI (Body Mass Index) is a measurement used to determine whether your weight is within a healthy range. This calculator should only be used by adults (pregnant or breastfeeding women should not rely on this BMI reading) and no action should be taken based on it.
+        its value in addition to consulting a qualified person such as a doctor. This calculator will give you an idea of ​​how your weight compares to general values.
+        Body Mass Index is calculated as your weight (in kilograms) divided by the square of your height (in meters).
+    </p>
+</div>
+
+<!-- script javascript external -->
+<script src="js/scripts.js"></script>
+
+</body>
+</html>

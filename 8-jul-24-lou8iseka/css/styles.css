@@ -1,0 +1,513 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap");
+
+/* css untuk body */
+    * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Jost", sans-serif;
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: rgb(22, 71, 50, 0.9);
+    }
+
+    /* css untuk box */
+    .box {
+        width: 500px;
+        background: #f4ecc5;
+        border-radius: 12px;
+        text-align:center;
+        box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    h1 {
+        color:rgb(0, 0, 0, 0.7);
+        font-weight: bold;
+        font-size: 36px;
+        padding: 30px 0;
+
+    }
+
+    /* css untuk content */
+    .content {
+        padding: 0 30px;
+    }
+
+    .input {
+        background-color: #fff;
+        box-shadow: 0px 0px 95px  -30px rgba(0, 0, 0, 0.15);
+        border-radius: 12px;
+        padding: 20px 0;
+        margin-bottom: 20px;
+    }
+
+    .input label {
+        display:block;
+        font-size: 18px;
+        font-weight: 600;
+        color: black;
+        margin-bottom: 20px;
+    }
+
+    .input input {
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #1a8664;
+        width: 50%;
+        text-align: center;
+        font-size: 20px;
+        font-family: "Jost", sans-serif;
+    }
+
+    /* css untuk input weight */
+    .inputW {
+        background: #fff;
+        box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
+        border-radius: 12px;
+        padding: 10px 0;
+        margin-bottom: 20px;
+    }
+
+    /* css untuk input label for weight */
+    .inputW label {
+        display:block;
+        font-size: 18px;
+        font-weight: 600;
+        color: #000;
+        margin-bottom: 20px;
+    }
+
+    .inputW input {
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #28bf8f;
+        width: 50%;
+        text-align: center;
+        font-size: 28px;
+        font-family: "Jost", sans-serif;
+    }
+
+    /* css untuk input weight */
+    .inputH {
+        background: #fff;
+        box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
+        border-radius: 12px;
+        padding: 10px 0;
+        margin-bottom: 20px;
+    }
+
+    /* css input for label for height */
+    .inputH label {
+        display: block;
+        font-size: 18px;
+        font-weight: 600;
+        color: #000;
+        margin-bottom: 20px;
+    }
+
+    .inputH input {
+        outline:none;
+        border: none;
+        border-bottom: 1px solid #28bf8f;
+        width: 50%;
+        text-align: center;
+        font-size: 28px;
+        font-family: "Jost", sans-serif;
+    }
+
+    /* grup gender */
+.gender {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    font-weight: 300;
+  gap: 10px;
+
+}
+/* input radio gender */
+.gender input[type=radio]{
+    margin: 0 0px 0 0;
+    display: none;
+    
+    
+}
+/* untuk hover label gender */
+.gender label:hover{
+    background-color: #787878;
+}
+/* untuk label yang dipilih pada input radio gender */
+.gender input[type=radio]:checked + label{
+    background-color: #6dd18d;
+    font-weight: bold;
+}
+/* untuk label gender */
+.gender label {
+    display: flex;
+    margin-left: 25px;
+   border-radius: 5px;
+   width: 100px;
+   justify-content: center;
+   padding: 5px 10px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+   padding: 10px 20px;
+   color: rgb(69, 69, 69);
+   align-items: center;
+   gap: 5px;
+   background-color: #a6a8ab;
+}
+
+    /* css untuk calculate button */
+    button.calculate {
+        cursor: pointer;
+        font-family: "Jost", sans-serif;
+        color:#fff;
+        background: #1a8664;
+        font-size: 16px;
+        border-radius: 7px;
+        padding: 12px 0;
+        width: 100%;
+        outline: none;
+        border: none;
+        transition: all 0.5s;
+        margin-bottom: 20px;
+    }
+
+    /* css untuk buttonnya */
+    button.calculate:hover {
+        background: #115842;
+    }
+
+    button.reset {
+        cursor: pointer;
+        font-family: 'Jost', sans-serif;
+        color:#fff;
+        background: #3b514a;
+        font-size: 16px;
+        border-radius: 7px;
+        padding: 12px 0;
+        width: 100%;
+        outline: none;
+        border: none;
+        transition: all 0.5s;
+        margin-bottom: 20px;
+    }
+
+    button.calculate:hover {
+        background: #115842;
+    }
+    
+    .result {
+        padding: 10px 20px;
+    }
+
+        .result p {
+            font-weight: 600;
+            font-size: 22px;
+            color:#000;
+            margin-bottom: 15px;
+        }
+
+        .result #result {
+            font-size: 36px;
+            font-weight: 600;
+            color: #1c7457;
+            background-color: aliceblue;
+            display:inline-block;
+            padding: 7px 20px;
+            border-radius: 55px;
+            margin-bottom: 25px;
+        }
+
+        #comment {
+            color:#115842;
+            font-weight: 800;
+        }
+
+    .comment {
+        display: none;
+        border: dashed 1px;
+        border-radius: 7px;
+        padding: 5px;
+    }
+
+    /* CSS untuk sidebar informasi */
+.side-info {
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 40px;
+    gap: 70px;
+    width: 500px;
+    background: #f4ecc5;
+    padding: 20px;
+    border-radius: 50px;
+    text-align: left;
+    height: 769px;
+    font-family: "Jost", sans-serif;
+    
+}
+    /* judul h2 dalam sidebar */
+    .side-info h2 {
+        margin-bottom: 20px;
+        text-align: center;
+        font-weight: bold;
+    }
+    /* paragraf dalam sidebar */
+    .side-info p {
+        margin-bottom: 10px;
+    }
+    /* daftar dalam sidebar */
+    .side-info ul {
+        padding-left: 20px;
+    }
+    /* item daftar dalam sidebar */
+    .side-info li {
+        margin-bottom: 5px;
+        list-style-type: disc;
+    }
+            /* komentar BMI */
+        .result-container .comment {
+            font-size: 16px;
+        color: #333;
+        }
+
+        /* teks komentar BMI */
+        #comment {
+            font-weight: 800;
+            color: #000000;
+        }
+
+        /* css for footer */
+        .footer {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            padding: 10px 15px;
+        }
+
+    .footer-text {
+        text-decoration: none;
+        color:rgba(0, 0, 0, 0.8);
+        font-family: 'Jost', sans-serif;
+        font-weight: 200;
+        font-size: 14px;
+        transition: all 0.5;
+    }
+
+    .footer-text:hover {
+        color:rgba(40, 40, 40, 1);
+    }
+
+    /* style for radio */
+    .gender {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+        background: #fff;
+        box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
+        border-radius: 12px;
+        padding: 20px 0;
+        margin-bottom: 20px;
+    }
+
+    /* Hide the browser's default radio button */
+    .gender .container input {
+        position:absolute;
+        opacity:0;
+        cursor: pointer; 
+    }
+
+    /* Create a custom radio button */
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+        border-radius: 50%;
+    }
+
+    /* On mouse-over, add a grey background color */
+    .gender .container:hover input ~ .checkmark {
+        background-color: #ccc;
+    }
+
+    /* when the radio button is checked, add a color background */
+    .gender .container input:checked ~ .checkmark {
+        background-color: #28bf8f;
+    }
+
+    /* Create the indicator (the dot/circle - hidden when not checked) */
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    /* Show the indicator (dot/circle when checked) */
+    .gender .container input:checked ~ .checkmark:after {
+        display:block;
+    }
+
+    /* Style the indicator (dot/circle) */
+    .gender .container .checkmark:after {
+        top: 9px;
+        left:9px;
+        width:8px;
+        height:8px;
+        border-radius:50%;
+        background: white;
+    }
+    /* END style for radio */
+
+.containerHW {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+    .bmi-scale {
+        display: flex;
+    }
+
+    .bmi-scale div {
+        flex: 1;
+        text-align: center;
+        text-transform: uppercase;
+        border-top: 5px solid var(--color);
+        padding: 10px
+    }
+
+    .bmi-scale h4 {
+        font-size: 0.75rem;
+        color: slategray;
+    }
+
+    :root {
+        --underweight: orange;
+        --normal: green;
+        --overweight: lightcoral;
+        --obese: crimson;
+        --extremely-obese: rgb(109, 7, 7);
+
+    }
+
+
+    /* The modal background */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location on the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0); /* Fullback color */
+        background-color: rgba(0, 0, 0, 0.4) ;/*black w/ opacity */
+        padding-top: 300px;
+    }
+
+    /* Modal content */
+    .modal-content {
+        background-color: #fff;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 600px;
+        border-radius: 10px;
+        box-shadow: #0a3326 -1px 2px 2px 1px;
+    }
+
+    #modalText {
+        padding-top: 8px;
+        padding-right: 5px;
+        font-size: 18px;
+        font-family: 'Jost', sans-serif;
+        color: rgb(24, 23, 23);
+    }
+
+    /* if the content is wrong */
+    .modal-wrong {
+        border: 2px solid red;
+    }
+
+    /* if the content is right */
+    .modal-correct {
+        border: 2px solid green;
+    }
+
+    /* the close button */
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .close:hover {
+        color: #d41111;
+    }
+
+    .linkDownload {
+        position: fixed;
+        background-color: #d12322;
+        margin: 20px;
+        padding: 10px 10px;
+        left: -0px;
+        border-radius: 5px;
+        bottom: -0px;
+        font-size: 16px;
+        font-weight: 400;
+        color: #fff;
+        text-decoration: none;
+        text-transform: capitalize;
+        transition: all 0.43s ease-in-out;
+    }
+
+    .linkDownload {
+        padding-left: 7px;
+    }
+
+    .linkDownload:hover {
+        text-decoration: none;
+        background-color: #000;
+    }
+
+@media (max-width: 700px){
+
+    .box {
+        width: 380px;
+    }
+
+    .input label {
+        font-size: 18px;
+    }
+
+    .inputH label, .inputW label {
+        font-size: 14px;
+    }
+
+    .input input, .inputH input, inputW input{
+        font-size: 24px;
+    }
+
+    .modal-content {
+        width: 380px;
+    }
+
+    .linkDownload{
+        display: none;
+    }
+}
